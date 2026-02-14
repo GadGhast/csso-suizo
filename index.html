@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiss + Playoffs</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
+body{background:#071c22;color:#fff;overflow-x:auto}
+.wrapper{display:flex;gap:120px;padding: 50px 50px 50px 50px;min-width: 2040px;align-items:flex-start}
+.swiss{display:flex;gap:20px}
+.col{width:190px}
+.col-title{
+font-size:13px;
+margin-bottom:-2px;
+letter-spacing:2px;
+color:#ccc;
+border:2px solid #2e8b57;
+padding:4px;
+text-align:center
+}
+
+/* MATCH HORIZONTAL */
+.match{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:-2px;
+border-radius:9px;
+padding:10px 12px;
+min-height:54px;
+position:relative;
+}
+
+.col-titleg{
+font-size:13px;
+margin-bottom:-8px;
+letter-spacing:2px;
+color:#2e8b57;
+border-top: 2px solid #2e8b57;
+border-left: 2px solid #2e8b57;
+border-right: 2px solid #2e8b57;
+border-bottom: none;
+padding: 0px 0px 8px 0px;
+border-radius:9px 9px 0 0;
+text-align: center;
+}
+
+.col-titlegr{
+font-size:13px;
+margin-bottom:-8px;
+letter-spacing:2px;
+color:#8a8f94;
+border-top: 2px solid #8a8f94;
+border-left: 2px solid #8a8f94;
+border-right: 2px solid #8a8f94;
+border-bottom: none;
+padding: 0px 0px 8px 0px;
+border-radius:9px 9px 0 0;
+text-align: center;
+}
+
+.col-titley{
+font-size:13px;
+margin-bottom:-8px;
+letter-spacing:2px;
+color:#c99a2e;
+border-top: 2px solid #c99a2e;
+border-left: 2px solid #c99a2e;
+border-right: 2px solid #c99a2e;
+border-bottom: none;
+padding: 0px 0px 8px 0px;
+border-radius:9px 9px 0 0;
+text-align: center;
+}
+
+.col-titler{
+font-size:13px;
+margin-bottom:-8px;
+letter-spacing:2px;
+color:#d83b3b;
+border-top: 2px solid #d83b3b;
+border-left: 2px solid #d83b3b;
+border-right: 2px solid #d83b3b;
+border-bottom: none;
+padding: 0px 0px 8px 0px;
+border-radius:9px 9px 0 0;
+text-align: center;
+}
+
+.col-playoffs{
+font-size:13px;
+margin-bottom:-8px;
+letter-spacing:2px;
+color:#2e8b57;
+border-top: 2px solid #2e8b57;
+border-left: 2px solid #2e8b57;
+border-right: 2px solid #2e8b57;
+border-bottom: none;
+padding: 0px 0px 8px 0px;
+border-radius:9px 9px 0 0;
+text-align: center;
+}
+
+.green{border:2px solid #2e8b57;background:rgba(46,139,87,0.15)}
+.yellow{border:2px solid #c99a2e;background:rgba(201,154,46,0.15)}
+.gray{border:2px solid #8a8f94;background:rgba(138,143,148,0.15)}
+.red{border:2px solid #d83b3b;background:rgba(216,59,59,0.15)}
+
+.team{display:flex;align-items:center}
+.team img{width:34px;height:34px;object-fit:contain}
+
+/* marcador centrado real */
+.score{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+font-size:18px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+/* RIGHT SIDE */
+.right-section{display:flex;gap:30px;align-items:flex-start}
+
+/* contenedor horizontal para playoffs */
+.playoffs-columns{display:flex;gap:20px;align-items:flex-start}
+
+/* CLASIFICADOS */
+.qualified{width:220px}
+.qualified h3{
+letter-spacing:2px;
+font-size:13px;
+margin-bottom:-2px;
+color:#2e8b57;
+border:2px solid #2e8b57;
+padding:6px;
+text-align:center;
+background:rgba(46,139,87,0.10);
+border-radius:9px 9px 0 0;
+}
+.seed{
+display:flex;
+align-items:center;
+gap:12px;
+padding:10px;
+background:#0f3328;
+border:2px solid #2e8b57;
+margin-bottom:-2px
+}
+.seed img{width:28px;height:28px}
+
+/* PLAYOFFS COLUMNAS */
+.colbr{width:190px}
+.col-titlebr{
+font-size:13px;
+margin:10px 0;
+letter-spacing:2px;
+color:#2e8b57;
+text-align:center
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="swiss">
+
+<!-- ================= 0-0 ================= -->
+<div class="col">
+<div class="col-titleg">0-0</div>
+
+<div class="match green"><div class="team"><img src="logos/vitality.png"></div><div class="score">1 - 0</div><div class="team"><img src="logos/g2.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/astralis.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/t1.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/spirit.png"></div><div class="score">0 - 1</div><div class="team"><img src="logos/fnatic.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/koi.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/heretics.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/blg.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/mad.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/navi.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/faze.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/nip.png"></div><div class="score">0 - 2</div><div class="team"><img src="logos/geng.png"></div></div>
+<div class="match green"><div class="team"><img src="logos/falcons.png"></div><div class="score">1 - 0</div><div class="team"><img src="logos/fcb.png"></div></div>
+</div>
+
+<!-- 1-0 / 0-1 -->
+<div class="col">
+<div class="col-titley">1-0</div>
+
+<div class="match yellow"><div class="team"><img src="logos/madrid.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/furia.png"></div></div>
+<div class="match yellow"><div class="team"><img src="logos/vitality.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/g2.png"></div></div>
+<div class="match yellow"><div class="team"><img src="logos/astralis.png"></div><div class="score">1 - 0</div><div class="team"><img src="logos/t1.png"></div></div>
+<div class="match yellow"><div class="team"><img src="logos/spirit.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/fnatic.png"></div></div>
+
+<div style="margin-top:40px">
+<div class="col-titlegr">0-1</div>
+
+<div class="match gray"><div class="team"><img src="logos/koi.png"></div><div class="score">0 - 2</div><div class="team"><img src="logos/heretics.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/blg.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/mad.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/navi.png"></div><div class="score">0 - 1</div><div class="team"><img src="logos/faze.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/nip.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/geng.png"></div></div>
+</div>
+</div>
+
+<!-- 2-0 / 1-1 / 0-2 -->
+<div class="col">
+<div class="col-titley">2-0</div>
+
+<div class="match yellow"><div class="team"><img src="logos/falcons.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/fcb.png"></div></div>
+<div class="match yellow"><div class="team"><img src="logos/madrid.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/furia.png"></div></div>
+
+<div style="margin-top:40px">
+<div class="col-titlegr">1-1</div>
+
+<div class="match gray"><div class="team"><img src="logos/vitality.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/g2.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/astralis.png"></div><div class="score">0 - 2</div><div class="team"><img src="logos/t1.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/spirit.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/fnatic.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/koi.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/heretics.png"></div></div>
+</div>
+
+<div style="margin-top:40px">
+<div class="col-titler">0-2</div>
+
+<div class="match red"><div class="team"><img src="logos/blg.png"></div><div class="score">0 - 2</div><div class="team"><img src="logos/mad.png"></div></div>
+<div class="match red"><div class="team"><img src="logos/navi.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/faze.png"></div></div>
+</div>
+</div>
+
+<!-- 2-1 / 1-2 -->
+<div class="col">
+<div class="col-titlegr">2-1</div>
+
+<div class="match gray"><div class="team"><img src="logos/nip.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/geng.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/falcons.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/fcb.png"></div></div>
+<div class="match gray"><div class="team"><img src="logos/madrid.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/furia.png"></div></div>
+
+<div style="margin-top:60px">
+<div class="col-titler">1-2</div>
+
+<div class="match red"><div class="team"><img src="logos/vitality.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/g2.png"></div></div>
+<div class="match red"><div class="team"><img src="logos/astralis.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/t1.png"></div></div>
+<div class="match red"><div class="team"><img src="logos/spirit.png"></div><div class="score">0 - 2</div><div class="team"><img src="logos/fnatic.png"></div></div>
+</div>
+</div>
+
+
+<!-- 2-2 + RIGHT SIDE -->
+<div class="col-with-right" style="display:flex;gap:50px;align-items:flex-start">
+
+  <!-- CUADRO 2-2 -->
+  <div class="col">
+    <div class="col-titler">2-2</div>
+    <div class="match red"><div class="team"><img src="logos/koi.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/heretics.png"></div></div>
+    <div class="match red"><div class="team"><img src="logos/blg.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/mad.png"></div></div>
+    <div class="match red"><div class="team"><img src="logos/navi.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/faze.png"></div></div>
+  </div>
+
+  <!-- RIGHT SECTION: Clasificados + Playoffs -->
+  <div class="right-section">
+
+    <!-- LISTA CLASIFICADOS -->
+    <div class="qualified">
+      <h3>CLASIFICADOS</h3>
+      <div class="seed"><img src="logos/vitality.png"><span>TBD1</span></div>
+      <div class="seed"><img src="logos/g2.png"><span>TBD2</span></div>
+      <div class="seed"><img src="logos/astralis.png"><span>TBD3</span></div>
+      <div class="seed"><img src="logos/t1.png"><span>TBD4</span></div>
+      <div class="seed"><img src="logos/spirit.png"><span>TBD5</span></div>
+      <div class="seed"><img src="logos/fnatic.png"><span>TBD6</span></div>
+      <div class="seed"><img src="logos/koi.png"><span>TBD7</span></div>
+      <div class="seed"><img src="logos/heretics.png"><span>TBD8</span></div>
+    </div>
+
+<!-- PLAYOFFS HORIZONTAL -->
+<div class="playoffs-columns">
+
+  <!-- CUARTOS -->
+  <div class="col">
+    <div class="col-playoffs">CUARTOS</div>
+    <div class="match green"><div class="team"><img src="logos/vitality.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/heretics.png"></div></div>
+    <div class="match green"><div class="team"><img src="logos/g2.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/koi.png"></div></div>
+    <div class="match green"><div class="team"><img src="logos/astralis.png"></div><div class="score">2 - 0</div><div class="team"><img src="logos/fnatic.png"></div></div>
+    <div class="match green"><div class="team"><img src="logos/t1.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/spirit.png"></div></div>
+  </div>
+
+  <!-- SEMIFINALES -->
+  <div class="col">
+    <div class="col-playoffs">SEMIFINALES</div>
+    <div class="match green"><div class="team"><img src="logos/vitality.png"></div><div class="score">2 - 1</div><div class="team"><img src="logos/t1.png"></div></div>
+    <div class="match green"><div class="team"><img src="logos/g2.png"></div><div class="score">1 - 2</div><div class="team"><img src="logos/astralis.png"></div></div>
+  </div>
+
+  <!-- FINAL -->
+  <div class="col">
+    <div class="col-playoffs">FINAL</div>
+    <div class="match green">
+      <div class="team"><img src="logos/vitality.png"></div>
+      <div class="score">2 - 1</div>
+      <div class="team"><img src="logos/g2.png"></div>
+    </div>
+  </div>
+
+</div> <!-- FIN PLAYOFFS HORIZONTAL -->
+
+
+  </div> <!-- FIN RIGHT SECTION -->
+
+</div> <!-- FIN COL-WITH-RIGHT -->
+
+</div> <!-- FIN SWISS -->
+
+</div> <!-- FIN WRAPPER -->
+
+</body>
+</html>
